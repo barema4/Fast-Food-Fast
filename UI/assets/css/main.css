@@ -1,0 +1,245 @@
+body{
+	background-image: url('assets/images/12.jpg');
+	background-size: cover;"
+}
+
+
+
+div.login-content{
+    width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0%;
+}
+div.login-main{
+    margin: 5% 38%;
+	width: 22%;
+	padding: 25px 5px 10px 5px;
+	background-color: #FAEBD7;
+	border:1px solid silver;
+}
+div.login{
+    background-color: #F0F8FF;
+	width: 70%;
+	margin-left: 35px;
+	border-radius: 5px;
+	padding: 15px 15px;
+
+}
+div.log{
+	font-size: 15px;
+    text-align: center;
+}
+div.log p{
+	font-size: 15px;
+    text-align: center;
+}
+div.login input{
+	border: 2px solid  blue;
+	padding: 8px 10px;
+	border-radius: 5px;
+	margin-bottom:15px;
+	width: 92%;
+}
+div.login form input[type="button"]{
+	border: 2px solid;
+	padding: 8px 10px;
+	border-radius: 5px;
+	width: 100%;
+	background-color: lightblue;
+    color: white;
+}
+div.login button[type="submit"]{
+	border: 2px;
+	padding: 8px 10px;
+	border-radius: 5px;
+	width: 100%;
+	background-color: lightblue;
+    color: white;
+}
+div.login-main p.account{
+    margin-bottom:30px;
+    padding: px;
+}
+
+div.login-main p.account a{
+	text-decoration:none;
+    color:blue;
+}
+div.login-main p.account a.down{
+	float: left;
+}
+
+div.header{
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	background-color: lightblue;
+	z-index: 999;
+	padding: 10px 0px;
+}
+
+
+div.header ul li{
+	display: inline;
+	margin-left: 20px;
+}
+
+
+div.header ul li a{
+	color: blue;
+	text-decoration: none;
+}
+
+ div.header ul li.logout-tag, div.header ul li.home-tag{
+	margin-left: 90px;
+} 
+
+
+  div.home-content{
+	
+	position: fixed;
+	top: 20%;
+	left: 8%;
+	background-color:#F0F8FF;
+	
+	width: 85%;
+	padding:2px;
+	
+}
+
+
+.food {
+	width: 200px;
+	height: 200px;
+    border: 1px solid green;
+    float: left;
+    margin: 5px;
+}
+
+.food, img{
+	width: 255px;
+	height: 150px;
+}
+
+	
+
+}
+.order form input[type="text"]{
+	border: 5px solid;
+	padding-bottom: 20px;
+	border-radius: 10px;
+	width: 20%;
+	background-color: lightgray;
+    color: white;
+    margin-top: 8px;
+
+
+}
+
+.order form input[type="number"]{
+	border: 5px solid;
+	padding-bottom: 20px;
+	border-radius: 10px;
+	width: 20%;
+	background-color: lightgray;
+    color: white;
+    margin-top: 8px;
+
+    
+}
+.order form input[type="submit"]{
+	border: 2px;
+	padding-bottom:25px;
+	border-radius: 5px;
+	width: 20%;
+	background-color: blue;
+    color: white;
+    margin-top: 8px;
+}
+div.home-content{
+	
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	background-color:white;
+	
+	width: 85%;
+	padding:2px;
+
+	
+}
+div.home-content-history p{
+	
+	margin-top: 7%;
+	padding-left:38%;
+	
+
+	
+}
+
+div.home-content-history #history-table{
+	
+	margin: 0 auto;
+	text-align: center;
+
+	
+}
+div.home-content-history #history-table th{
+	
+	background-color: #a4a4a4a4;
+    text-align: center;
+	
+} 
+div.home-content-history #history-table td{
+	
+	background-color: #f4f4f4f4;
+    text-align: center;
+
+	
+} 
+div.home-content-order #order-table{
+	
+	
+    text-align: center;
+    padding-top: 6%;
+    margin-top:4%;
+    position: absolute;
+
+	
+}
+div.home-content-order #order-table td{
+	
+	background-color: #f4f4f4f4;
+    text-align: center;
+   
+	
+} 
+
+
+div.home-content-order #order-table th{
+	
+	background-color: #a4a4a4a4;
+    text-align: center;
+    padding-top: 6%;
+
+	
+}
+table,th,td
+	{
+		border:0px;
+	}
+	th{
+		color: rgb(125, 98, 167);
+		font-size: 20px;
+		text-align: left;
+
+	}
+	th, td
+	{
+		width:400px;
+		height:50px;
+	}
+
+	
