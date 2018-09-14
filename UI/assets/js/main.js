@@ -1,23 +1,35 @@
 function editFood(){
-    alert("You have clicked a food item for editing!");
+    alert("Edit this food_item");
 
 }
 function deleteFood(){
-    alert("You have deleted a food item!");
+    alert("Deleted a food item");
+  }
+  function acceptOrder(){
+    alert("complete Order");
+
+}
+function declineOrder(){
+    alert("Order declined");
   }
 
-/*function to verify user or admin*/
-function Verify(){
+
+function Authent(){
     var username = document.querySelector("#username").value;
     var password = document.querySelector("#password").value;
     if(username==='user' && password ==="user"){
        window.location.href ="home.html";
-    }else if(username==='admin' && password ==="admin"){
+    }
+
+    else if(username==='admin' && password ==="admin"){
       var username = document.querySelector("#username").value;
       var password = document.querySelector("#password").value;
       window.location.href ="admin_home.html";
   
-    }else{
     }
+
+    else{
+
+         }
   }
   
