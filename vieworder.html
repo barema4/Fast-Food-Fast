@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ViewOrder</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+        <script type="text/javascript" src="assets/js/main.js"></script>
+    </head>
+    <body>
+            <div class="header">
+                <ul>
+            
+                     <li><a href="admin_home.html">Fast-Food</a></li>
+                        <li class="home-tag"><a href="vieworder.html">List of Oders</a></li>
+                            <li class="home-tag"><a href="admin_home.html">view food items</a></li>
+            
+            
+                                <li class="logout-tag"><a href="index.html">Logout</a></li>
+                </ul>
+            </div>
+
+                <div class="home-content-order-section">
+                    
+                    
+                    
+                        <table id="accept-table">
+                            <tr>
+                                <th >Name</th>
+                                <th>Email</th>
+                                <th>contact.</th>
+                                <th>Rocation</th>
+                                <th>Food ordered</th>
+                                <th>quantity</th>
+                                <th>action</th>
+                                
+
+                            </tr>
+                            
+                            <tr>
+                                    <td>sam rubarema</td>
+                                    <td>sam@gmail.com</td>
+                                    <td>0786666349</td>
+                                    <td>Nakuwade</td>
+                                    <td>Chicken</td>
+                                    <td>10</td>
+                                    <td class="complete"><a href="#" onclick="return acceptOrder()">accept</a>  or <a href="#" onclick="return declineOrder()">Decline</a>
+                                        <label>complete</label>
+                                        <input type="checkbox" name="complete" value="complete">
+
+                                    </td>
+                                    
+                                    
+                                    
+                            </tr>
+                            
+                            
+                            
+                            <tr>
+                                    <td>sara</td>
+                                    <td>sara@gmail.com</td>
+                                    <td>0754063403</td>
+                                    <td>makerere</td>
+                                    <td>matoke</td>
+                                    <td>5</td>
+                                    <td class="complete"><a href="#" onclick="return acceptOrder()">accept</a>  or <a href="#" onclick="return declineOrder()">Decline</a>
+                                         <label>complete</label>
+                                        <input type="checkbox" name="complete" value="complete">
+
+
+                                    </td>
+                                                             
+                            </tr>
+                            
+
+                                
+                        </table>
+
+                    
+                    
+                </div>
+
+    </body>
+</html>
