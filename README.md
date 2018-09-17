@@ -1,4 +1,4 @@
-# Fast-Food-Fast
+gh-page link: https://barema4.github.io/Fast-Food-Fast/
 
 Order food quickly
 Fast-Food-Fast is a food delivery service app for a restaurant.
