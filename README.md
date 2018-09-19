@@ -1,6 +1,9 @@
 # Fast-Food-Fast
 
+[![Build Status](https://travis-ci.org/barema4/Fast-Food-Fast.svg?branch=develop)](https://travis-ci.org/barema4/Fast-Food-Fast)
 Order food quickly
+
+
 Fast-Food-Fast is a food delivery service app for a restaurant.
 
 
