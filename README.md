@@ -6,6 +6,9 @@
 [![Coverage Status](https://coveralls.io/repos/github/barema4/Fast-Food-Fast/badge.svg?branch=develop)](https://coveralls.io/github/barema4/Fast-Food-Fast?branch=develop)
 
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/b92d196622e222fefee7/maintainability)](https://codeclimate.com/github/barema4/Fast-Food-Fast/maintainability)
+
+
 
 Order food quickly
 
