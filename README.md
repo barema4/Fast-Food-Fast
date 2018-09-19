@@ -3,6 +3,8 @@
 [![Build Status](https://travis-ci.org/barema4/Fast-Food-Fast.svg?branch=develop)](https://travis-ci.org/barema4/Fast-Food-Fast)
 
 
+[![Coverage Status](https://coveralls.io/repos/github/barema4/Fast-Food-Fast/badge.svg?branch=develop)](https://coveralls.io/github/barema4/Fast-Food-Fast?branch=develop)
+
 
 
 Order food quickly
