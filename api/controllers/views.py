@@ -1,3 +1,7 @@
+"""
+   Module for defining views
+"""
+
 from flask import jsonify, request
 from flask.views import MethodView
 from api.models.foodmodel import OrderList
@@ -7,8 +11,14 @@ orders = OrderList()
 
 
 class GetOrders(MethodView):
+    """
+       class for defining views
 
+    """
     def get(self, order_id):
+        """
+           method for all get requests and single request
+        """
         if order_id is None:
             return jsonify({'orders': orders.get_all_orders()}), 200
 
@@ -17,6 +27,9 @@ class GetOrders(MethodView):
             return jsonify({'orders': orders.get_one_order(order_id)}), 200
 
     def post(self):
+        """
+           method to post all requests
+        """
         keys = ("user_name", "item_name", "email", "quantity", "status")
 
         if not set(keys).issubset(set(request.json)):
@@ -60,6 +73,9 @@ class GetOrders(MethodView):
         return jsonify(response_object), 201
 
     def put(self, order_id):
+        """
+           method for updating status requests
+        """
         if order_id:
             orders.update_order(order_id)
 
