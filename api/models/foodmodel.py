@@ -14,7 +14,8 @@ class OrderList:
         id = len(xl) + 1
 
         order = {
-            'User_name': user_name, 'item_name': item_name, 'email': email, 'item_quantity': quantity, 'status': status,
+            'User_name': user_name, 'item_name': item_name,
+            'email': email, 'item_quantity': quantity, 'status': status,
             'id': id
         }
         self.orders.append(order)

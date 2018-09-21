@@ -1,4 +1,4 @@
-from views import GetOrders
+from api.controllers.views import GetOrders
 class GetUrls:
     @staticmethod
     def fetch_urls(app):

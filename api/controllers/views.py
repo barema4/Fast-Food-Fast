@@ -1,6 +1,6 @@
 from flask import jsonify, request
 from flask.views import MethodView
-from foodmodel import OrderList
+from api.models.foodmodel import OrderList
 import re
 
 orders = OrderList()
