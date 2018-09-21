@@ -34,14 +34,6 @@ class GetOrders(MethodView):
         if (' ' in request.json['item_name']) == True:
             return jsonify({'message': 'item_name should not contain any spaces'}), 400
 
-        if request.json['email'] == "":
-            return jsonify({'email': 'enter email'}), 400
-
-        if (' ' in request.json['email']) == True:
-            return jsonify({'message': 'email should not contain any spaces'}), 400
-        if request.json['quantity'] == "":
-            return jsonify({'quantity': 'please enter quantity'}), 400
-
         if not isinstance(request.json['quantity'], int):
             return jsonify({'message': 'enter quantity as an interger'}), 400
 
