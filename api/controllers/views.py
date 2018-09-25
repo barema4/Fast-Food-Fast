@@ -73,16 +73,7 @@ class GetOrders(MethodView):
         return jsonify(response_object), 201
 
     def put(self, order_id):
-        """
-           method for updating status requests
-        """
-        if order_id:
-            orders.update_order(order_id)
-
-            response_object = {
-                'orders': orders.__dict__
-            }
-
-            return jsonify(response_object), 200
-        else:
-            return "order item not found"
+        
+            return orders.update_order(order_id)
+     
+        
