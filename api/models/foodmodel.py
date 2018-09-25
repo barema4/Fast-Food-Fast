@@ -1,7 +1,8 @@
 """
    Module for 
 """
-from flask import request
+from flask import request, jsonify
+
 
 class OrderList:
     """
@@ -20,9 +21,9 @@ class OrderList:
         """
            Method to post requests
         """
-        xl = [order for order in self.orders]
+        order_list = [order for order in self.orders]
 
-        id = len(xl) + 1
+        id = len(order_list) + 1
 
         order = {
             'User_name': user_name, 'item_name': item_name,
@@ -38,21 +39,23 @@ class OrderList:
         """
         for order in self.orders:
             if order_id == order['id']:
+                
                 return order
-        return ({'order': 'order_item doesnot exist'})
+            else:
+                return ({'order': 'order_item doesnot exist'})
 
     def update_order(self, order_id):
         """
            Method to update order_status requests
         """
-        if order_id:
-            for order in self.orders:
-                if order_id == order['id']:
-                    item_json = request.get_json()
-                    status = item_json['status']
-                    order['status'] = status
 
-                    return order
-        else:
-            return "order item not found"
+        for order in self.orders:
+            if order_id == order['id']:
+                item_json = request.get_json()
+                status = item_json['status']
+                order['status'] = status
+
+                return jsonify({'message': 'Order_status Successfully updated'})
+
+            return jsonify({'Message': 'No order_item with the order_id specified to update'})
 
