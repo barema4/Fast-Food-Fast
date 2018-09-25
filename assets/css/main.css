@@ -1,7 +1,12 @@
 body {
 	
 	background-size: cover;
+	background-image: url("../images/12.jpg");
 	
+}
+
+.body{
+	background-image: url("../images/4.jpg");
 }
 
 
@@ -91,11 +96,13 @@ div.header ul li{
 div.header ul li a{
 	color: blue;
 	text-decoration: none;
+	margin-left: 90px;
 }
 
- div.header ul li.logout-tag, div.header ul li.home-tag{
-	margin-left: 90px;
-} 
+div.header ul li a.active {
+	color: white;
+}
+
 
 
   /*div.home-content{
@@ -111,14 +118,9 @@ div.header ul li a{
 }
 
 .home-content-order{
-position: fixed;
-	padding-top:40%;
-	margin-top: 10%;
 
-	margin-left:6.5%;
 	
-	width: 85%;
-	padding:2px;
+	margin-top: 10%;
 
 
 }
@@ -126,8 +128,7 @@ position: fixed;
 
  
 	border: 2px solid;
-	padding-top: 18px;
-	padding-left: 3px;
+	padding: 15px 10px;
 	border-radius:5px;
 	width:200px;
 	margin-top:10px;
@@ -141,8 +142,7 @@ position: fixed;
 
  
 	border: 2px solid;
-	padding-top: 18px;
-	padding-left: 3px;
+	padding: 15px 10px;
 	border-radius:5px;
 	width:200px;
 	margin-top:10px;
@@ -255,7 +255,6 @@ div.home-content-order #order-table{
     text-align: center;
     padding-top: 3%;
     margin-top:4%;
-    position: absolute;
     width: 100%;
     height:80%;
     padding-left:200px;
@@ -270,6 +269,7 @@ div.home-content-order #order-table td{
 	background-color: #f4f4f4f4;
     text-align: center;
     font-size: 20px;
+    padding:30px;
 
    
 	
@@ -280,8 +280,8 @@ div.home-content-order #order-table th{
 	
 	background-color: #a4a4a4a4;
     text-align: center;
-    padding-top:0%;
-    margin-bottom: 20%;
+    padding:2%;
+    
 
 	
 }
@@ -319,3 +319,19 @@ div.home-content-order-section #accept-table td{
 	padding: 30px;
 	margin: 30px;
 }
+
+
+#home-content-category{
+    position: fixed;
+	padding-top:40%;
+	margin-top: 10%;
+
+	margin-left:6.5%;
+	
+	width: 85%;
+	padding:2px;
+
+
+	
+
+
