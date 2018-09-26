@@ -16,7 +16,7 @@ Order food quickly
 Fast-Food-Fast is a food delivery service app for a restaurant.
 
 
-LOGIN DETAILS FOR BOTH ADMIN AND USER
+LOGIN DETAILS FOR BOTH ADMIN AND USER FOR USER INTERFACE
     
     FOR ADMIN:
     user_name: admin
@@ -28,7 +28,7 @@ LOGIN DETAILS FOR BOTH ADMIN AND USER
 
 
 
-   FAST-FOOD-FAST FEATURES
+   FAST-FOOD-FAST FEATURES FOR USER INTERFACE TEMPERATE
 
 1.Users can create an account and log in
 
@@ -44,5 +44,70 @@ LOGIN DETAILS FOR BOTH ADMIN AND USER
     Mark orders as completed
 
 6.A user should be able to see a history of ordered food
+
+FAST-FOOD-FAST app has got backend develop of api endpoints that consists of four features
+ * get all orders
+ * fetch a specfic order
+ * Post and order
+ * Update the status of the order
+ 
+ Prerequisites for FAST-FOOD-FAST api endpoints
+
+ * vscode
+ * python
+ * Virtual environment
+ * flask frame work
+ * pytest--cov
+ * pylint
+ * pytest
+ * Postman
+ * gunicorn
+ * coveralls
+ * coverage
+ 
+ 
+ Installation of prerequisites
+
+ * download and install vscode
+ * download and install python(3.6.5)
+ * download and virtual environment
+ * use pip to install flask in the terminal
+ * use pip to install pytest in the terminal
+ * use pip to install pytest--cov inthe terminal
+ * use pip to install pylint in the terminal
+ * use pip to install coverage in the terminal
+ * use pip to install coveralls
+ 
+ Api endpoints and their Routes
+ 
+
+|Verb       | End Point                                             |Use                                     
+| -------   |-----------------------------------------------  ------------------------------------------|
+|  GET      |  /api/v1/orders                                 |Gets a list of all orders                |
+|  GET      | /api/v1/orders/<int:order_id>                   |Fetch a specific order                   |
+|  POST     |/api/v1/orders                                   |Posting an order                         |
+|  PUT      |/api/v1/orders/<int: order_id>                   |update status of a specfic order         |
+
+Deployment
+
+The system is deployed on github which is integrated with TravisCl for continuous integration 
+then integrated with coverall.io to show the percentage of code that is tested the integrated 
+with code climate for maintainability and finally hosted on heroku in order for the user(Developer) to use.
+
+Versioning
+
+ * I use git hub for versioning.
+
+ Authors
+
+*RUBAREMA SAM* -(https://github.com/barema4)
+
+ Acknowledgments
+
+* Thanks to Andela
+
+
+
+ 
 
 
