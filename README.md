@@ -80,9 +80,6 @@ FAST-FOOD-FAST app has got backend develop of api endpoints that consists of fou
  
  Api endpoints and their Routes
  
-
- Verb       |           End Point                                                 Use                                     
-
   GET              /api/v1/orders                                        Gets a list of all orders                
   GET             /api/v1/orders/<int:order_id>                          Fetch a specific order                   
   POST            /api/v1/orders                                          Posting an order                         
