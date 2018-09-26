@@ -3,6 +3,7 @@
 """
 import unittest
 import json
+
 from app import APP
 
 
@@ -68,8 +69,7 @@ class TestViews(unittest.TestCase):
         results = self.client().put('/api/v1/orders/2', content_type='application/json',
                                     data=json.dumps({"status": "decline"}))
         self.assertEqual(results.status_code, 200)
-        resp = json.loads(results.data.decode())
-        self.assertTrue(resp["orders"])
+        
 
 
 
