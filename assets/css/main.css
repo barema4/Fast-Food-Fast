@@ -1,0 +1,312 @@
+body {
+	
+	background-size: cover;
+	background-image: url("../images/q.jpg");
+	
+}
+
+.body{
+	background-image: url("../images/4.jpg");
+}
+
+
+
+div.login-content{
+    width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0%;
+}
+div.login-main{
+    margin: 5% 38%;
+	width: 22%;
+	padding: 25px 5px 10px 5px;
+	background-color: #FAEBD7;
+	border:1px solid silver;
+}
+div.login{
+    background-color: #F0F8FF;
+	width: 70%;
+	margin-left: 35px;
+	border-radius: 5px;
+	padding: 15px 15px;
+
+}
+div.log{
+	font-size: 15px;
+    text-align: center;
+}
+div.log p{
+	font-size: 15px;
+    text-align: center;
+}
+div.login input{
+	border: 2px solid  blue;
+	padding: 8px 10px;
+	border-radius: 5px;
+	margin-bottom:15px;
+	width: 92%;
+}
+div.login form input[type="button"]{
+	border: 2px solid;
+	padding: 8px 10px;
+	border-radius: 5px;
+	width: 100%;
+	background-color: lightblue;
+    color: white;
+}
+div.login button[type="submit"]{
+	border: 2px;
+	padding: 8px 10px;
+	border-radius: 5px;
+	width: 100%;
+	background-color: lightblue;
+    color: white;
+}
+div.login-main p.account{
+    margin-bottom:30px;
+    padding: px;
+}
+
+div.login-main p.account a{
+	text-decoration:none;
+    color:blue;
+}
+div.login-main p.account a.down{
+	float: left;
+}
+
+div.header{
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	background-color: lightblue;
+	z-index: 999;
+	padding: 10px 0px;
+}
+
+
+div.header ul li{
+	display: inline;
+	margin-left: 20px;
+}
+
+
+
+div.header ul li a{
+	color: blue;
+	text-decoration: none;
+	margin-left: 90px;
+}
+
+div.header ul li a.active {
+	color: white;
+}
+
+
+
+  /*div.home-content{
+	
+	position: fixed;
+	top: 20%;
+	left: 8%;
+	background-color:white;
+	
+	width: 85%;
+	padding:2px;*/
+	
+}
+
+.home-content-order{
+
+	
+	margin-top: 10%;
+
+
+}
+.container form input[type="text"]{
+
+ 
+	border: 2px solid;
+	padding: 15px 10px;
+	border-radius:5px;
+	width: 50%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	display: block;
+	
+    color: lightblue;
+    border-radius: 3px;
+
+}
+#home-content-category h3{
+	letter-spacing: 10px;
+}
+.container form input[type="number"]{
+
+ 
+	border: 2px solid;
+	padding: 15px 10px;
+	border-radius:5px;
+	width:200px;
+	margin-top:10px;
+	display: block;
+	
+    color: lightblue;
+    border-radius: 3px;
+
+}
+.container form input[type="submit"]{
+	
+	background-color: lightblue;
+    color: white;
+    margin-top: 19px;
+    width: 52%;
+    padding: 13px 0;
+    border: none;
+}
+
+.food {
+	width: 200px;
+	height: 200px;
+    border: none;
+    float: left;
+    margin: 5px;
+    padding-top: 6%;
+    padding-left: 5%;
+}
+
+.food, img{
+	width: 255px;
+	height: 150px;
+}
+
+	
+
+}
+.order form input[type="text"]{
+	border: 5px solid;
+	padding-bottom: 20px;
+	border-radius: 10px;
+	width: 20%;
+	background-color: lightgray;
+    color: white;
+    margin-top: 8px;
+
+
+}
+
+.order form input[type="number"]{
+	border: 5px solid;
+	padding-bottom: 20px;
+	border-radius: 10px;
+	width: 20%;
+	background-color: lightgray;
+    color: white;
+    margin-top: 8px;
+
+    
+}
+.order form input[type="submit"]{
+	border: 2px;
+	padding-bottom:25px;
+	border-radius: 5px;
+	width: 20%;
+	background-color: blue;
+    color: white;
+    margin-top: 8px;
+}
+
+div.home-content-history p{
+	
+	margin-top: 7%;
+	padding-left:38%;
+	
+
+	
+}
+
+.complete{
+	width: 30px;
+	padding: 30px;
+	margin: 30px;
+}
+
+
+#home-content-category{
+    position: fixed;
+	padding-top:40%;
+	margin-top: 10%;
+	background: rgba(0, 0, 0, 0.4);
+	width: 100%;
+	margin-left: -10px; 
+	padding: 10px 0px 30px 0px;
+}
+
+#output{
+	display: none;
+}
+
+#output table{
+	margin-top: 100px;
+	background: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	margin-left: -10px;
+	padding: 15px 0px;
+	color: whitesmoke;
+}
+#output table tbody td{
+	text-align: center;
+	padding: 10px 0px;
+}
+
+#menu_out_put table{
+margin-top:100px;
+width: 100%;
+margin-left:-8px;
+color: white;
+padding:15px 0px;
+background: rgba(0,0,0,0.7);
+
+}
+#menu_out_put table tbody td{
+	text-align: center;
+	padding: 6px 0px;
+}
+
+#menu_out_put{
+	display:none;
+}
+
+#out_put table{
+	margin-top: 100px;
+	background: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	margin-left: -10px;
+	padding: 15px 0px;
+	color: whitesmoke;
+}
+
+#out_put table tbody td{
+	text-align: center;
+	padding: 10px 0px;
+}
+
+#single table tbody td{
+	text-align: center;
+	padding: 10px 0px;
+}
+
+#single table{
+	margin-top: 100px;
+	background: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	margin-left: -10px;
+	padding: 15px 0px;
+	color: whitesmoke;
+}
+
+#single{
+	display: none;
+}
