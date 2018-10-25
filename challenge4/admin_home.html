@@ -1,0 +1,57 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order</title>
+    
+   
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    
+    
+    
+</head>
+
+<body class="body">
+
+
+	<div class="header">
+		<ul>
+			
+			<li><a href="all_orders.html">view all orders</a></li>
+            <li><button id ="item"><a href="item.html">Add item</a></button></li>
+			<li><input id="search" type="text" placeholder="Search Item By Id"></li>
+            <li><button id ="status">update_status</button></li>
+            
+			<li><button id ="log"><a href="index.html">Logout</a></button></li>
+		</ul>
+    </div>
+    
+    <div id = "single">
+        <table>
+            
+            <thead>
+                <th>Order Date</th>
+                <th>Order Id</th>
+                <th>Order Name</th>
+                <th>Order Status</th>
+                <th>price</th>
+                <th>User Id</th>
+                <th>User Name</th>
+                
+            </thead>
+
+            <tbody id="orders_single">
+
+            </tbody>
+                
+            
+        </table>
+
+
+    </div>
+    
+    <script src="assets/js/One_order.js"></script>
+	
+</body>
+</html>
