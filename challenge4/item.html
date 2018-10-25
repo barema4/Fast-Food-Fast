@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>Order</title>
+    
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    </head>
+        <body class="body">
+        	<div class="header">
+		<ul>
+			
+		
+      <li> <button id ="item"><a href="item.html">Add item</a></button></li>
+			
+            
+      <li><button><a href="admin_home.html">Admin Home Page</a></button></li>
+            
+			<li><button id ="log"><a href="index.html">Logout</a></button></li>
+		</ul>
+    </div>
+
+            <div id="home-content-category" align="center">
+                <h3>ITEM FORM</h3>
+                    <div class="container">
+              
+                        <form id = "add_item">
+                        <div>
+                        <label>Item Name</label>
+                        <input type="text" id = "item_name"  placeholder="item_name" required="">
+                        </div>
+
+                        <div class="order">
+
+                        <label>price</label>
+                        <input type="text" id = "price"  placeholder="price" required="">
+                        </div>
+
+                        <div class="submit">
+                        <input type="submit" id = "order" value="submit">
+                        </div>
+                
+                        </form>
+                    </div>
+            
+            </div>
+<script>
+          	
+document.getElementById('add_item').addEventListener('submit', addMenu); 
+
+function addMenu(e){
+
+
+     e.preventDefault()
+     item = document.getElementById('item_name').value;
+     price = document.getElementById('price').value;
+     
+    
+    console.log(item, price);
+
+		
+    fetch('http://127.0.0.1:5000/api/v2/menu', {
+         method: 'POST',
+         headers: {
+             'Accept': 'application/json, text/plain, */*',
+             'Content-type':'application/json',
+             'Authorization': `Bearer ${localStorage.getItem('accessToken')}`,
+		 	'Access-Control-Allow-Origin': '*'
+			
+         },
+         body: JSON.stringify({item: item, price: price})
+     })
+    .then((res) => res.json())
+    .then((data) => {
+        let message = data.message;
+        localStorage.setItem("accessToken", data.access_token)
+        console.log(message);
+        if(message == 'you have successfully posted an order'){
+            alert(message);
+            window.location = '';
+        }
+        else {
+            alert(message);
+        }
+        });
+}
+
+
+
+
+ </script>
+
+     
+    </body>
+  </html>
