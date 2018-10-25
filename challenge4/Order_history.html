@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	   <title>Order</title>
+	    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+        
+    </head>
+    <body>
+	
+	   <div class="header">
+		    <ul>
+			
+			    <button id="menur">Menu</button>
+			   
+                <button id="get_history">Order History</button>
+                <button><a href="vieworder.html">Order Food</a></button>
+            
+			
+			    <button><a href="index.html">Logout</a></button>
+		    </ul>
+	    </div>
+
+        <div id="menu_out_put" >
+
+        <table >
+
+            <thead>
+                <th>Item_id</th>
+                <th>Order Item</th>
+                <th>Order Price</th>
+                
+            </thead>
+
+            <tbody id="item_table">
+                
+            </tbody>
+            
+        </table>
+
+        </div>
+        <div id="output">
+
+        <table>
+
+            <thead>
+                <th>Order Date</th>
+                <th>Order Id</th>
+                <th>Order Name</th>
+                <th>Order Status</th>
+                <th>price</th>
+                
+                <th>User Name</th>
+            </thead>
+
+            <tbody id="order_hist">
+                
+            </tbody>
+            
+        </table>
+        
+    </div>
+        
+            <script src="assets/js/menu.js"></script>
+
+        <script >
+            document.getElementById('get_history').addEventListener('click',get_history);
+            
+             
+
+            function get_history(){
+                document.getElementById('output').style.display = "block"
+                document.getElementById('menu_out_put').style.display = "none"
+
+                fetch('http://127.0.0.1:5000/api/v2/users/orders', {
+
+                        method: 'GET',
+                        headers: {
+                        'Accept': 'application/json, text/plain, */*',
+                        'Content-type':'application/json',
+                        
+                        'Authorization': `Bearer ${localStorage.getItem('accessToken')}`,
+                        'Access-Control-Allow-Origin': '*'
+                          }})
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log(data);
+
+                let output = "";
+
+                    console.log(data.length);
+
+                    
+                     for(i = 0; i < data.length; i++){
+
+                          output += "<tr>"+
+
+                         "<td>"+data[i].order_date+"</td>"+
+                         "<td>"+data[i].order_id+"</td>"+
+                          "<td>"+data[i].order_name+"</td>"+
+                          "<td>"+data[i].order_status+"</td>"+
+                          "<td>"+data[i].price+"</td>"+
+                          // "<td>"+data[i].user_id+"</td>"+
+                          "<td>"+data[i].user_name+"</td>"+
+                          "</tr>";
+                    
+                      }
+
+
+
+
+                     document.getElementById('order_hist').innerHTML = output;
+                })
+            }
+
+
+
+
+            // function post_order(e){
+
+            //     e.preventDefault()
+
+
+            //     order_name = document.getElementById('order_name').value;
+            //     price = document.getElementById('price').value;
+
+     
+            //     console.log(order_name, price);
+
+        
+            // fetch('http://127.0.0.1:5000/api/v2/orders', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Accept': 'application/json, text/plain, */*',
+            //         'Content-type':'application/json',
+            //         'Authorization': `Bearer ${localStorage.getItem('accessToken')}`,
+            //         'Access-Control-Allow-Origin': '*'
+                    
+            //     },
+            //     body: JSON.stringify({order_name: order_name, price: price})
+            // })
+            // .then((res) => res.json())
+            // .then((data) => {
+
+            //     let message = data.message;
+            //     localStorage.setItem("accessToken", data.access_token)
+            //     console.log(message);
+            //     if(message == 'you have successfully posted an order'){
+
+            //         alert(message);
+
+            //         window.location = '';
+            //     }
+            //     else {
+
+            //         alert(message);
+            //         }
+            //         });
+            //     }
+
+
+
+
+                
+            
+
+        </script>
+        
+     
+	    
+    
+    </body>
+</html>
