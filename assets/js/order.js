@@ -11,11 +11,8 @@ function post_order(e){
                 order_name = document.getElementById('order_name').value;
                 price = document.getElementById('price').value;
 
-     
-                console.log(order_name, price);
-
         
-            fetch('http://127.0.0.1:5000/api/v2/orders', {
+            fetch('https://api-fast-food-app.herokuapp.com/api/v2/orders', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json, text/plain, */*',
@@ -28,20 +25,18 @@ function post_order(e){
             })
             .then((res) => res.json())
             .then((data) => {
-
+               
                 let message = data.message;
-                localStorage.setItem("accessToken", data.access_token)
+
                 console.log(message);
-                if(message == 'you have successfully posted an order'){
 
-                    alert(message);
+                if(message == "success"){
 
-                    window.location = '';
+                    alert("Order Successfully Added !");
                 }
-                else {
 
-                    alert(message);
-                    }
+
+               
                     });
                 }
 

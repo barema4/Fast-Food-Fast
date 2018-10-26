@@ -7,7 +7,7 @@ function search(e){
   console.log(item);
 
 
-    fetch(`http://127.0.0.1:5000/api/v2/orders/${item}`, {
+    fetch(`https://api-fast-food-app.herokuapp.com/api/v2/orders/${item}`, {
             method: 'GET',
             headers: {
             'Accept': 'application/json, text/plain, */*',

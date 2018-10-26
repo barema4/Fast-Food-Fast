@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", all_orders)
 function all_orders(){
 
     
-    fetch('http://127.0.0.1:5000/api/v2/orders', {
+    fetch('https://api-fast-food-app.herokuapp.com/api/v2/orders', {
 
             method: 'GET',
             headers: {
@@ -34,6 +34,7 @@ function all_orders(){
                           "<td>"+data.order_list[i].price+"</td>"+
                           "<td>"+data.order_list[i].user_id+"</td>"+
                           "<td>"+data.order_list[i].user_name+"</td>"+
+                          "<td>"+"<button onclick='update_status("+data.order_list[i].order_id+")'>Update Status</button>"+"</td>"+
                           "</tr>";
                     
                       }
@@ -42,5 +43,45 @@ function all_orders(){
 
                     
                      });
+
+}
+
+function update_status(order_id){
+
+  orderStatus = document.getElementById("status").value;
+
+
+  let orderID = order_id;
+
+    fetch('https://api-fast-food-app.herokuapp.com/api/v2/order', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-type':'application/json',
+                    'Authorization': `Bearer ${localStorage.getItem('accessToken')}`,
+                    'Access-Control-Allow-Origin': '*'
+                    
+                },
+                body: JSON.stringify({order_id: orderID, order_status:orderStatus})
+            })
+            .then((res) => res.json())
+            .then((data) => {
+               
+                let message = data.message;
+
+                console.log(data);
+
+                if(message == "success"){
+
+                    alert("Order Successfully Updated !");
+                }
+
+
+               
+                    });
+
+
+
+
 
 }
