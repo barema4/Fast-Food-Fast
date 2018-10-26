@@ -71,7 +71,11 @@
                 document.getElementById('output').style.display = "block"
                 document.getElementById('menu_out_put').style.display = "none"
 
-                fetch('http://127.0.0.1:5000/api/v2/users/orders', {
+               // var token = localStorage.getItem('accessToken');
+
+                console.log(localStorage.getItem('accessToken'));
+
+                fetch('https://api-fast-food-app.herokuapp.com/api/v2/users/orders', {
 
                         method: 'GET',
                         headers: {
@@ -83,11 +87,11 @@
                           }})
                 .then((res) => res.json())
                 .then((data) => {
-                    console.log(data);
+                  //  console.log(data);
 
                 let output = "";
 
-                    console.log(data.length);
+                   // console.log(data.length);
 
                     
                      for(i = 0; i < data.length; i++){
@@ -111,52 +115,6 @@
                      document.getElementById('order_hist').innerHTML = output;
                 })
             }
-
-
-
-
-            // function post_order(e){
-
-            //     e.preventDefault()
-
-
-            //     order_name = document.getElementById('order_name').value;
-            //     price = document.getElementById('price').value;
-
-     
-            //     console.log(order_name, price);
-
-        
-            // fetch('http://127.0.0.1:5000/api/v2/orders', {
-            //     method: 'POST',
-            //     headers: {
-            //         'Accept': 'application/json, text/plain, */*',
-            //         'Content-type':'application/json',
-            //         'Authorization': `Bearer ${localStorage.getItem('accessToken')}`,
-            //         'Access-Control-Allow-Origin': '*'
-                    
-            //     },
-            //     body: JSON.stringify({order_name: order_name, price: price})
-            // })
-            // .then((res) => res.json())
-            // .then((data) => {
-
-            //     let message = data.message;
-            //     localStorage.setItem("accessToken", data.access_token)
-            //     console.log(message);
-            //     if(message == 'you have successfully posted an order'){
-
-            //         alert(message);
-
-            //         window.location = '';
-            //     }
-            //     else {
-
-            //         alert(message);
-            //         }
-            //         });
-            //     }
-
 
 
 
