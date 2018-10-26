@@ -11,7 +11,7 @@ document.getElementById('menur').addEventListener('click',view_menu);
             document.getElementById('menu_out_put').style.display = "block"
             document.getElementById('output').style.display = "none"
 
-            fetch('http://127.0.0.1:5000/api/v2/menu', {
+            fetch('https://api-fast-food-app.herokuapp.com/api/v2/menu', {
             method: 'GET',
             headers: {
             'Accept': 'application/json, text/plain, */*',
