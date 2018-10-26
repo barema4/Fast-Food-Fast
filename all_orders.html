@@ -19,7 +19,13 @@
                   
                   <li><a href="all_orders.html">view all orders</a></li>
             <li><button id ="item"><a href="item.html">Add item</a></button></li>
-            <li><button id ="status"><a href="home.html">update_status</a></button></li>
+            <li>
+                <select id="status">
+                    <option value="APPROVED">APPROVED</option>
+                    <option value="DECLINED">DECLINED</option>
+                    <option value="PENDING">PENDING</option>                
+                </select>
+             </li>
             
                   <li><button id ="log"><a href="index.html">Logout</a></button></li>
             </ul>
@@ -36,6 +42,7 @@
                 <th>price</th>
                 <th>User Id</th>
                 <th>User Name</th>
+                <th>Option</th>
             </thead>
 
             <tbody id="orders_table">
