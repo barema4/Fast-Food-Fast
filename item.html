@@ -9,8 +9,7 @@
 		<ul>
 			
 		
-      <li> <button id ="item"><a href="item.html">Add item</a></button></li>
-			
+      
             
       <li><button><a href="admin_home.html">Admin Home Page</a></button></li>
             
@@ -57,7 +56,7 @@ function addMenu(e){
     console.log(item, price);
 
 		
-    fetch('http://127.0.0.1:5000/api/v2/menu', {
+    fetch('https://api-fast-food-app.herokuapp.com/api/v2/menu', {
          method: 'POST',
          headers: {
              'Accept': 'application/json, text/plain, */*',
@@ -71,8 +70,8 @@ function addMenu(e){
     .then((res) => res.json())
     .then((data) => {
         let message = data.message;
-        localStorage.setItem("accessToken", data.access_token)
-        console.log(message);
+        
+        console.log(data);
         if(message == 'you have successfully posted an order'){
             alert(message);
             window.location = '';
